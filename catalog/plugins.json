@@ -1,0 +1,28 @@
+{
+  "catalog_version": "1",
+  "updated": "2026-08-12",
+  "plugins": [
+    {
+      "slug": "coolrom",
+      "name": "CoolROM",
+      "author": "MoveWeight",
+      "repository": "https://git.moveweight.com/BlizzHacker/romarr-plugin-coolrom",
+      "install": "https://git.moveweight.com/BlizzHacker/romarr-plugin-coolrom",
+      "download": "https://git.moveweight.com/BlizzHacker/romarr-plugin-coolrom/archive/v0.1.0.tar.gz",
+      "version": "0.1.0",
+      "ref": "v0.1.0",
+      "updated": "2026-08-12",
+      "rpp_version": "1",
+      "capabilities": [],
+      "platforms": [],
+      "network": ["coolrom.com"],
+      "status": "broken",
+      "search_only": false,
+      "key_required": false,
+      "in_tree": false,
+      "description": "NOT IMPLEMENTED AND NOT SURVEYED. coolrom.com's robots.txt explicitly disallows anthropic-ai and Claude-Web, so the agent that surveyed the other six sites stopped at robots.txt and inspected no pages. The site's structure is therefore unknown rather than difficult.",
+      "terms": "This repository records why a survey was not performed. It fetches, indexes and redistributes nothing.",
+      "comments": "Known from robots.txt alone: the site is behind Cloudflare but serves robots.txt cleanly, so there is no blanket managed challenge. A generic client falls under User-agent: *, which allows the site at Crawl-delay: 10 and disallows /cr-admin/, /members/, /admin/, /api/, /ads/ and /queue.php. Unknown: listing shape, id scheme, region/size metadata, download flow, and whether files are still served. Buildable in principle by a non-Anthropic surveyor; honour the 10-second crawl delay and model it on romarr-plugin-retrostic."
+    }
+  ]
+}
