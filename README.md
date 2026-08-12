@@ -82,7 +82,7 @@ Anthropic agent, against a structure that must be surveyed firsthand first.
    is ten times the delay the Retrostic provider uses voluntarily.
 3. Stay out of `/api/`, `/members/`, `/admin/`, `/cr-admin/`, `/ads/` and
    `/queue.php`.
-4. Model the provider on `romarr-plugin-retrostic`, which is the reference for
+4. Model the provider on `rom-hub-retrostic`, which is the reference for
    this family, and take its platform-mapping discipline with it: every slug
    verified against `romarr.platforms.resolve()` by a test, and any system
    ROMarr does not carry counted and skipped rather than guessed.
