@@ -17,12 +17,12 @@
       "platforms": [],
       "network": ["coolrom.com"],
       "status": "broken",
-      "search_only": false,
+      "search_only": true,
       "key_required": false,
       "in_tree": false,
-      "description": "NOT IMPLEMENTED AND NOT SURVEYED. coolrom.com's robots.txt explicitly disallows anthropic-ai and Claude-Web, so the agent that surveyed the other six sites stopped at robots.txt and inspected no pages. The site's structure is therefore unknown rather than difficult.",
-      "terms": "This repository records why a survey was not performed. It fetches, indexes and redistributes nothing.",
-      "comments": "Known from robots.txt alone: the site is behind Cloudflare but serves robots.txt cleanly, so there is no blanket managed challenge. A generic client falls under User-agent: *, which allows the site at Crawl-delay: 10 and disallows /cr-admin/, /members/, /admin/, /api/, /ads/ and /queue.php. Unknown: listing shape, id scheme, region/size metadata, download flow, and whether files are still served. Buildable in principle by a non-Anthropic surveyor; honour the 10-second crawl delay and model it on rom-hub-retrostic."
+      "description": "BROWSER-ASSISTED. There is no standalone provider yet; ROMarr Capture indexes metadata from CoolROM pages the operator opens in Brave/Chromium.",
+      "terms": "The standalone repository fetches and redistributes nothing. Browser capture reads metadata only from a page the operator opened and grants no rights to download or redistribute the site's files.",
+      "comments": "The server-side survey stopped at robots.txt, which names anthropic-ai and Claude-Web with Disallow: /. The accepted path is now the operator's browser: Capture has preview-first detail/list descriptors, makes no request to CoolROM, and never crawls. The detail matcher follows the long-standing /roms/<platform>/<id>/<title>.php shape; selectors remain provisional until checked in an operator session."
     }
   ]
 }

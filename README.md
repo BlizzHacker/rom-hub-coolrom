@@ -1,13 +1,15 @@
 # CoolROM provider for ROM Hub / ROMarr
 
-**Status: not installable, and — unlike the others in this family —
-not surveyed. This repository is documentation and a catalogue entry.**
+**Status: browser-assisted.** There is no standalone RPP provider yet, but
+ROMarr Capture now covers CoolROM pages the operator opens in Brave/Chromium.
+This repository remains the source catalogue record and the place to document
+the standalone-provider boundary.
 
 | Capability | Status |
 |---|---|
-| `search` | **Unimplemented — the site's structure was never inspected** |
-| `importer` | Unimplemented, same reason |
-| `stream` | Unimplemented, same reason |
+| Standalone `search` | Unimplemented — no server-side survey was performed |
+| ROMarr Capture | Implemented, preview-first detail/list descriptors |
+| Browser actions | Use the controls on the page and the operator's own session |
 
 ## Why there is nothing here
 
@@ -33,9 +35,10 @@ site. The survey that produced the other six providers in this family was
 performed by one, so **it stopped at `robots.txt` and fetched no further
 pages.**
 
-That is the whole reason this repository is empty of code. It is not that
-CoolROM is hard, or challenged, or dead — it is that nobody has looked, and
-filling the gap by ignoring the request was not on the table.
+That is why this repository has no server-side provider code. It is not that
+CoolROM is dead. The accepted integration is now the operator's own browser:
+the Capture extension reads only a page they opened, never fetches a CoolROM
+URL itself, and previews extracted fields before anything is sent to ROMarr.
 
 ## What is and is not known
 
@@ -72,8 +75,10 @@ These are two different questions and they should not be run together:
    group that applies to it is `User-agent: *` — allowed, at a 10-second crawl
    delay.
 
-So a provider here is buildable in principle, by someone who is not an
-Anthropic agent, against a structure that must be surveyed firsthand first.
+The Capture adapter follows that distinction directly. Its historical detail
+URL matcher and defensive selectors are intentionally labelled provisional;
+a missing title, platform, or size in the popup is an adapter defect to refine
+from the rendered page, not a reason to discard the source.
 
 ## If you pick this up
 
